@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  fastdfs:
+    build: FastDFS
+    restart: always
+    container_name: fastdfs
+    privileged: true
+    volumes:
+    - /usr/local/fastdfs/storage:/fastdfs/storage
+    network_mode: host
